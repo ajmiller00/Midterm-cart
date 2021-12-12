@@ -62,7 +62,7 @@ app.get('', (req, res) => {
 					overallTotal += total;
 				}
 				res.write("</table>");
-			    	res.write("Total: \$" + overallTotal)
+			    	res.write("Total: " + overallTotal)
 				res.write("<form method = 'POST' action = '/checkout'>")
 			    	res.write("<br>")
 				res.write("<input type = 'submit' value = 'Checkout' class = 'button'></input>")
