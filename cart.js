@@ -32,7 +32,7 @@ app.get('', (req, res) => {
             if (currUser.email == "FAILURE")
             {
                 res.write("<div id = 'cart'>")
-                res.write("User is not Logged in");
+                res.write("<h2>User is not Logged in </h2>");
                 res.write("</div>")
             } else {
                 user.findOne(query, function (err, result ){
@@ -121,7 +121,7 @@ app.post('/checkout', (req, res) => {
     			res.write("<li><a class = 'burger' href='https://ajmiller00.github.io/Midterm/workshops_events.html'>Events</a> </li><li><a href='https://ajmiller00.github.io/Midterm/contact.html' >Contact Us</a> </li>");
                         res.write("<li></li><li></li><li><a class = 'burger' href='https://reveauchocolat-cart.herokuapp.com/'>My Cart</a></li></ul></div></header>");
 			res.write("<body>");
-    	res.write("<div id = 'add' ><br><br><br><br>Your Order has been Processed<br><br><br><br></div>");
+    	res.write("<div id = 'add' ><br><br><br><br><h2>Your Order has been Processed</h2><br><br><br><br></div>");
 	res.end();
 })
 
