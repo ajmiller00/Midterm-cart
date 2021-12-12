@@ -28,13 +28,12 @@ app.get('', (req, res) => {
 			currUser.findOne({current: "current"}, function (err, currUser) {
 			var query = {
 				email : currUser.email
-			}
-			if (currUser.email == "FAILURE")
-			{
-				res.write("Not Logged In");
-			} else {
-				
-		    		user.findOne(query, function (err, result ){
+            }
+            if (currUser.email == "FAILURE")
+            {
+                res.write("User is not Logged in");
+            } else {
+                user.findOne(query, function (err, result ){
 				res.write("<title>Cart</title><link rel = 'stylesheet' type = 'text/css' href = 'style.css'>");
 				res.write("<div id = 'cart'>")
 				res.write("<table>");
@@ -67,7 +66,7 @@ app.get('', (req, res) => {
 					overallTotal += total;
 				}
 				res.write("</table>");
-			    	res.write("Total: $" + overallTotal)
+			    	res.write("Total: " + overallTotal)
 				res.write("<form method = 'POST' action = '/checkout'>")
 			    	res.write("<br>")
 				res.write("<input type = 'submit' value = 'Checkout' class = 'button'></input>")
@@ -76,9 +75,10 @@ app.get('', (req, res) => {
 			    	res.write("<br>")
 				res.write("</div>")
 			});
+            }
+		    
 
 		}); 
-		}
     })
     })
 })
