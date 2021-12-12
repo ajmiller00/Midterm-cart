@@ -46,6 +46,7 @@ app.get('', (req, res) => {
 				res.write("<th class = 'border-bottom'></th>");
 				res.write("</tr>");
 				var cart = result.cart;
+			    	var overallTotal = 0;
 				for (i = 0; i < cart.length; i++)
 				{
 					var item = cart[i].cart_item;
@@ -58,8 +59,10 @@ app.get('', (req, res) => {
 					res.write("<td style = 'width: 15%;'> $" + price + "</td>");
 					res.write("<td style = 'width: 20%;'> $" + total + "</td>");
 					res.write("</tr>")
+					overallTotal += total;
 				}
 				res.write("</table>");
+			    	res.write("Total: " + overallTotal)
 				res.write("<form method = 'POST' action = '/checkout'>")
 			    	res.write("<br>")
 				res.write("<input type = 'submit' value = 'Checkout' class = 'button'></input>")
