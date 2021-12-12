@@ -31,8 +31,8 @@ app.get('', (req, res) => {
             }
             if (currUser.email == "FAILURE")
             {
-                res.write("<div id = 'cart'>")
-                res.write("<h2>User is not Logged in </h2>");
+                res.write("<div id = 'cart' style = 'font-family: 'Josefin Sans', sans-serif;'>")
+                res.write("User is not Logged in");
                 res.write("</div>")
             } else {
                 user.findOne(query, function (err, result ){
