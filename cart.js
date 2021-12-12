@@ -62,8 +62,9 @@ app.get('', (req, res) => {
 				res.write("</table>");
 				res.write("<form method = 'POST' action = '/checkout'>")
 				res.write("<input type = 'submit' value = 'Checkout' class = 'button'></input>")
-			    	res.write("<br>")
 				res.write("</form>")
+			    	res.write("<br>")
+			    	res.write("<br>")
 				res.write("</div>")
 			});
 
@@ -108,7 +109,7 @@ app.post('/checkout', (req, res) => {
     			res.write("<li><a class = 'burger' href='https://ajmiller00.github.io/Midterm/workshops_events.html'>Events</a> </li><li><a href='https://ajmiller00.github.io/Midterm/contact.html' >Contact Us</a> </li>");
                         res.write("<li></li><li></li><li><a class = 'burger' href='https://reveauchocolat-cart.herokuapp.com/'>My Cart</a></li></ul></div></header>");
 			res.write("<body>");
-    	res.write("<div id = 'add' >Your Order has been Processed</div>");
+    	res.write("<div id = 'add' ><br><br><br><br>Your Order has been Processed<br><br><br><br></div>");
 	res.end();
 })
 
