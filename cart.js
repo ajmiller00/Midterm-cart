@@ -113,13 +113,13 @@ app.post('/checkout', (req, res) => {
     res.write("<li><a href='https://reveauchocolat-cart.herokuapp.com/' style='text-decoration: underline; text-underline-position: under; box-sizing: border-box;padding:10px 20px; background-color: #ff9933; color: #003267;border: none;margin-top:  10px;cursor:pointer;-webkit-border-radius: 5px;border-radius: 4px;'>My Cart</a> </li>");
     res.write("</ul></nav>");
 
-    res.write("<div class='burger' id = 'bur'><img src=\"https://ajmiller00.github.io/Midterm/burger.png\" class='burger' onclick='show()'></div>");
+    res.write("<div class='burger' id = 'bur'><img src='https://ajmiller00.github.io/Midterm/burger.png' class='burger' onclick='show()'></div>");
 	res.write("<div class='oBurger' id = 'burger'><ul id = 'burgerUl'>");
 	res.write("<li><a class = 'burger' href='https://ajmiller00.github.io/Midterm/about_us.html'>About Us</a> </li><li><a href='https://reveauchocolat-products.herokuapp.com/'>Shop</a> </li>");
     res.write("<li><a class = 'burger' href='https://ajmiller00.github.io/Midterm/catering.html'>Catering</a> </li>");
     res.write("<li><a class = 'burger' href='https://reveauchocolat-gifts.herokuapp.com/'>Gifts</a> </li>");
     res.write("<li><a class = 'burger' href='https://ajmiller00.github.io/Midterm/workshops_events.html'>Events</a> </li><li><a href='https://ajmiller00.github.io/Midterm/contact.html' >Contact Us</a> </li>");
-    res.write("<li></li><li></li><li><a class = 'burger' style = 'text-decoration: underline; text-underline-position: under; box-sizing: border-box;' href='https://reveauchocolat-cart.herokuapp.com/'>My Cart</a></li></ul></div></header>");
+    res.write("<li></li><li></li><li><a class = 'burger' href='https://reveauchocolat-cart.herokuapp.com/'>My Cart</a></li></ul></div></header>");
 	res.write("<body>");
     res.write("<div id = 'add' style='text-align: center;' ><br><br><br><br><h2>Your order has been processed.</h2><br><br><br><br></div>");
     MongoClient.connect(url, { useUnifiedTopology: true }, function(err, db) {
