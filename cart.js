@@ -82,9 +82,7 @@ app.get('', (req, res) => {
 
 		}); 
     })
-    db.close();
     })
-    res.end();
 })
 
 
@@ -143,9 +141,7 @@ app.post('/checkout', (req, res) => {
             }}}
         )
         })
-	db.close();
     })
-	res.end();
 })
 
 app.listen(port);
