@@ -132,14 +132,14 @@ app.post('/checkout', (req, res) => {
 		var query = {
 			email : currUser.email
         }
-        user.findOne(
-            query,
-            { $set: {cart: {
-                car_item: "hello",
-                cart_quantity: 10,
-                cart_price: 0
-            }}}
-        )
+//         user.findOne(
+//             query,
+//             { $set: {cart: {
+//                 car_item: "hello",
+//                 cart_quantity: 10,
+//                 cart_price: 0
+//             }}}
+//         )
         })
     })
 })
