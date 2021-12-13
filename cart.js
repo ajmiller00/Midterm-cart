@@ -120,6 +120,10 @@ app.post('/checkout', (req, res) => {
     res.write("<li><a class = 'burger' href='https://reveauchocolat-gifts.herokuapp.com/'>Gifts</a> </li>");
     res.write("<li><a class = 'burger' href='https://ajmiller00.github.io/Midterm/workshops_events.html'>Events</a> </li><li><a href='https://ajmiller00.github.io/Midterm/contact.html' >Contact Us</a> </li>");
     res.write("<li></li><li></li><li><a class = 'burger' style = 'text-decoration: underline; text-underline-position: under; box-sizing: border-box;' href='https://reveauchocolat-cart.herokuapp.com/'>My Cart</a></li></ul></div></header>");
+	
+	res.write("<script language='javascript'>");
+        res.write("function show() { if (document.getElementById('burger').style.display =='none') { document.getElementById('burger').style.display = 'block'; } else {");
+        res.write("document.getElementById('burger').style.display = 'none'; } } </script> ");
 	res.write("<body>");
     res.write("<div id = 'add' style='text-align: center;' ><br><br><br><br><h2>Your order has been processed.</h2><br><br><br><br></div>");
     MongoClient.connect(url, { useUnifiedTopology: true }, function(err, db) {
