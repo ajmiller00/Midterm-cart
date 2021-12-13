@@ -134,9 +134,9 @@ app.post('/checkout', (req, res) => {
         }
         user.findOneAndUpdate(
             query,
-            { $unset: {cart: {
-                car_item: "",
-                cart_quantity: 0,
+            { $set: {cart: {
+                car_item: "hello",
+                cart_quantity: 10,
                 cart_price: 0
             }}}
         )
