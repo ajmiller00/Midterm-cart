@@ -32,6 +32,8 @@ app.get('', (req, res) => {
                 res.write("<div id = 'cart' style = \"font-family: 'Josefin Sans', sans-serif;\">")
                 res.write("User is not Logged in");
                 res.write("</div>")
+		db.close();
+		res.end();
             } else {
                 user.findOne(query, function (err, result ){
 				res.write("<title>Cart</title><link rel = 'stylesheet' type = 'text/css' href = 'style.css'>");
@@ -80,7 +82,9 @@ app.get('', (req, res) => {
 
 		}); 
     })
+    db.close();
     })
+    res.end();
 })
 
 
@@ -139,6 +143,7 @@ app.post('/checkout', (req, res) => {
             }}}
         )
         })
+	db.close();
     })
 	res.end();
 })
