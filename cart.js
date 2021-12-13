@@ -132,9 +132,9 @@ app.post('/checkout', (req, res) => {
 		var query = {
 			email : currUser.email
         }
-        user.findOneAndUpdate(
+        user.findOne(
             query,
-            { $set: {cart: {
+            { $unset: {cart: {
                 car_item: "hello",
                 cart_quantity: 10,
                 cart_price: 0
