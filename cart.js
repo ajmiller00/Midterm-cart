@@ -53,7 +53,7 @@ app.get('', (req, res) => {
 				res.write("</tr>");
 				var cart = result.cart;
 			    	var overallTotal = 0;
-				for (i = 0; i < cart.length; i++)
+				for (i = 1; i < cart.length; i++)
 				{
 					var item = cart[i].cart_item;
 					var quantity = cart[i].cart_quantity;
@@ -132,14 +132,14 @@ app.post('/checkout', (req, res) => {
 		var query = {
 			email : currUser.email
         }
-//         user.findOne(
-//             query,
-//             { $set: {cart: {
-//                 car_item: "hello",
-//                 cart_quantity: 10,
-//                 cart_price: 0
-//             }}}
-//         )
+        user.findOne(
+            query,
+            { $set: {cart: {
+                car_item: "hello",
+                cart_quantity: 10,
+                cart_price: 0
+            }}}
+        )
         })
     })
 })
