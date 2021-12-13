@@ -51,7 +51,7 @@ app.get('', (req, res) => {
 				res.write("</tr>");
 				var cart = result.cart;
 			    	var overallTotal = 0;
-				for (i = 1; i < cart.length; i++)
+				for (i = 0; i < cart.length; i++)
 				{
 					var item = cart[i].cart_item;
 					var quantity = cart[i].cart_quantity;
