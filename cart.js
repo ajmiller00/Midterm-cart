@@ -29,7 +29,7 @@ app.get('', (req, res) => {
             }
             if (currUser.email == "FAILURE")
             {
-                res.write("<div id = 'cart' style = \"font-family: 'Josefin Sans', sans-serif;\">")
+                res.write("<div id = 'cart' style = \"font-size:30px; font-family: 'Josefin Sans', sans-serif;\">")
                 res.write("User is not Logged in");
                 res.write("</div>")
 		db.close();
