@@ -124,7 +124,7 @@ app.post('/checkout', (req, res) => {
         res.write("function show() { if (document.getElementById('burger').style.display =='none') { document.getElementById('burger').style.display = 'block'; } else {");
         res.write("document.getElementById('burger').style.display = 'none'; } } </script> ");
 	res.write("<body>");
-    res.write("<div id = 'add' style='text-align: center;' ><br><br><br><br><h2>Your order has been processed.</h2><br><br><br><br></div>");
+    res.write("<div id = 'add' style='text-align: center;' ><br><br><br><br><h9>Your order has been processed.</h9><br><br><br><br></div>");
     MongoClient.connect(url, { useUnifiedTopology: true }, function(err, db) {
         if(err) { return console.log(err); }
 
