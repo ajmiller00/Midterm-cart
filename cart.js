@@ -135,13 +135,9 @@ app.post('/checkout', (req, res) => {
 		var query = {
 			email : currUser.email
         }
-        user.findOne(
+        user.findOneAndUpdate(
             query,
-            { $set: {cart: {
-                car_item: "hello",
-                cart_quantity: 10,
-                cart_price: 0
-            }}}
+            { "cart" : [" "]}
         )
         })
     })
