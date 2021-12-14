@@ -136,9 +136,7 @@ app.post('/checkout', (req, res) => {
 			email : currUser.email
         }
         user.findOneAndUpdate(
-            query,
-            { "cart" : [" "]}
-        )
+            
         })
     })
 })
