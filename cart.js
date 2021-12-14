@@ -31,7 +31,8 @@ app.get('', (req, res) => {
             {
                 res.write("<div id = 'cart' style = \"font-size:30px; font-family: 'Josefin Sans', sans-serif;\">")
                 res.write("User is not logged in<br> <br><br><br>");
-                res.write("</div>")
+                res.write("</div>");
+		res.write("<footer>&copy; 2021 Rêve au Chocolat – 23 Fausse Street, Cambridge, MA – (617) 555 0113</footer>");
 		db.close();
 		res.end();
             } else {
