@@ -135,8 +135,6 @@ app.post('/checkout', (req, res) => {
 		var query = {
 			email : currUser.email
         }
-        user.findOneAndUpdate(
-            
         })
     })
 })
